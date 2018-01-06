@@ -1,0 +1,11 @@
+@mixin typeScaleGenerator($minValue: 80, $maxValue: 200, $step: 5) {
+  $v: $minValue;
+
+  @while $v <= $maxValue {
+    .f#{$v} {
+      font-size: #{$v}#{'%'};
+    }
+
+    $v: $v + $step;
+  }
+}
