@@ -1,0 +1,41 @@
+$modifiers: (
+  a: '',
+  t: '-top',
+  r: '-right',
+  b: '-bottom',
+  l: '-left'
+);
+
+$pairModifiers: (
+  h: ('-right', '-left'),
+  v: ('-top', '-bottom')
+);
+
+@mixin spacingGenerator($prop, $base, $maxValue: 100) {
+  @for $i from 1 through $maxValue {
+    $z: '';
+
+    @if $i < 10 {
+      $z: '000';
+    }
+    @else if $i < 100 {
+      $z: '00';
+    }
+    @else if $i < 1000 {
+      $z: '0';
+    }
+
+    @each $modName, $modVal in $modifiers {
+      .#{$base}#{$modName}-#{$z}#{$i} {
+        #{$prop}#{$modVal}: #{$i}px;
+      }
+    }
+
+    @each $modName, $modVal in $pairModifiers {
+      .#{$base}#{$modName}-#{$z}#{$i} {
+        #{$prop}#{nth($modVal,1)}: #{$i}px;
+        #{$prop}#{nth($modVal,2)}: #{$i}px;
+      }
+    }
+  }
+}
