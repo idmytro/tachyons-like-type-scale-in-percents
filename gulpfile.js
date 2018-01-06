@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const replace = require('gulp-replace');
 
-gulp.task('sass', () => gulp.src('./scss/spacing-in-pixels.scss')
+gulp.task('sass', () => gulp.src('./scss/type-scale-in-percents.scss')
     .pipe(sass({
         /* Default: nested | Values: nested, expanded, compact, compressed */
         outputStyle: 'compact'
