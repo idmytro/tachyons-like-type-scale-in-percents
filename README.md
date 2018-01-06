@@ -1,1 +1,1 @@
-# tachyons-like-type-scale-in-percents
+# Tachyons-like type scale in percents
