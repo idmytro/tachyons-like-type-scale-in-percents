@@ -2,7 +2,7 @@
   $v: $minValue;
 
   @while $v <= $maxValue {
-    .f#{$v} {
+    .f-#{$v} {
       font-size: #{$v}#{'%'};
     }
 
