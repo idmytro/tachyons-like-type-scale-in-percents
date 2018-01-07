@@ -1,4 +1,4 @@
-@mixin typeScaleGenerator($minValue: 80, $maxValue: 200, $step: 5) {
+@mixin typeScaleGenerator($minValue: 50, $maxValue: 200, $step: 5) {
   $v: $minValue;
 
   @while $v <= $maxValue {
